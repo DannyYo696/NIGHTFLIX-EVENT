@@ -8,16 +8,6 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { toast } from '@/hooks/use-toast'
 
-
-const EVENT_GALLERY = [
-  '/images/nightflix-1.jpg',
-  '/images/nightflix-2.jpg',
-  '/images/nightflix-3.jpg',
-  '/images/nightflix-4.jpg',
-  '/images/nightflix-5.jpg',
-]
-
-
 const TICKET_TIERS = [
   {
     id: 'regular',
@@ -53,7 +43,7 @@ const TICKET_TIERS = [
     popular: true
   },
   {
-    id: 'gang_of_5',
+    id: 'gang-of-5',
     name: 'Gang of 5',
     price: 20000,
     description: 'Group package for 5 people',
@@ -72,66 +62,43 @@ const TICKET_TIERS = [
 ]
 
 
-function AutoCarousel() {
-  const images = [
-    'https://raw.githubusercontent.com/DannyYo696/svillage/b53ddbb1d05ac5cd96902b23a1ce2b43043bc881/_MG_7618.jpg',
+const HERO_IMAGES = [
+  'https://raw.githubusercontent.com/DannyYo696/svillage/b53ddbb1d05ac5cd96902b23a1ce2b43043bc881/_MG_7618.jpg',
     'https://raw.githubusercontent.com/DannyYo696/svillage/c1ca406beac59fcabcf79c236cbdfb52ff883dc5/_MG_7685.jpg',
     'https://raw.githubusercontent.com/DannyYo696/svillage/0ec915f6c90cb5e4f5bc487d9ef629c0a9a9b6d9/_MG_7770.jpg',
     'https://raw.githubusercontent.com/DannyYo696/svillage/8d940d3c33bdb8220effe4ca9de4678cc3284710/_MG_7788.jpg',
     'https://raw.githubusercontent.com/DannyYo696/svillage/1e09662e759a683b296438749046aa1d674d8b3c/_MG_7760.jpg',
-  ]
+]
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
+function AutoCarousel() {
+  const [current, setCurrent] = useState(0)
 
-  // Auto slide
   useState(() => {
-    if (isHovered) return
-
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length)
-    }, 3500)
+      setCurrent((prev) => (prev + 1) % HERO_IMAGES.length)
+    }, 4000) // slide every 4s
 
     return () => clearInterval(interval)
   })
 
   return (
-    <div
-      className="relative max-w-6xl mx-auto overflow-hidden rounded-3xl border border-slate-800 shadow-2xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Slides */}
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((image, index) => (
-          <div key={index} className="min-w-full h-[320px] sm:h-[380px] md:h-[440px] relative">
-            <img
-              src={image}
-              alt={`Nightflix Event ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-          </div>
-        ))}
-      </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`h-2.5 w-2.5 rounded-full transition-all ${
-              currentIndex === index
-                ? 'bg-rose-500 w-6'
-                : 'bg-slate-500/60 hover:bg-slate-400'
-            }`}
+    <div className="relative w-full h-[260px] sm:h-[380px] md:h-[460px] overflow-hidden rounded-2xl mb-20">
+      {HERO_IMAGES.map((src, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === current ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <img
+            src={src}
+            alt={`Nightflix slide ${index + 1}`}
+            className="w-full h-full object-cover"
           />
-        ))}
-      </div>
+          {/* overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/30 to-transparent" />
+        </div>
+      ))}
     </div>
   )
 }
@@ -175,6 +142,9 @@ export default function Home() {
   const eventDate = new Date()
   eventDate.setDate(eventDate.getDate() + 30) // Set event date to 30 days from now
 
+  const ibadanEventDate = new Date()
+  ibadanEventDate.setDate(ibadanEventDate.getDate() + 37) // Ibadan event date
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Header */}
@@ -186,6 +156,15 @@ export default function Home() {
               <span className="text-xl font-bold text-white">Nightflix</span>
             </div>
             <nav className="hidden sm:flex items-center gap-6">
+              <a href="#cities" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+                Cities
+              </a>
+              <a href="/lagos" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+                Lagos
+              </a>
+              <a href="/ibadan" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+                Ibadan
+              </a>
               <a href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
                 About
               </a>
@@ -236,7 +215,7 @@ export default function Home() {
 
           <Button
             size="lg"
-            onClick={() => document.getElementById('tickets')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('cities')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold px-8 py-6 text-lg shadow-lg shadow-rose-500/25"
           >
             Get Your Tickets Now
@@ -244,24 +223,115 @@ export default function Home() {
           </Button>
         </section>
 
-
-        {/* Past Event Auto Carousel */}
-<section className="mb-20 sm:mb-28">
-  <div className="text-center mb-10">
-    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
-      Past Nightflix Moments
-    </h2>
-    <p className="text-slate-400 text-lg">
-      Relive the energy, the lights, and the unforgettable vibes
-    </p>
-  </div>
-
-  <AutoCarousel />
-</section>
+        {/* Image Carousel */}
+<AutoCarousel />
 
 
+        {/* City Selection Section */}
+        <section id="cities" className="mb-16 sm:mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Choose Your City</h2>
+            <p className="text-slate-400 text-lg">Select your preferred Nightflix event location</p>
+          </div>
 
-        {/* Ticket Tiers Section */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Lagos Card */}
+            <Card
+              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => window.location.href = '/lagos'}
+            >
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-rose-500 mb-4 mx-auto shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-white">Lagos Edition</CardTitle>
+                <CardDescription className="text-slate-400 mt-2">
+                  Victoria Island, Lagos
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="text-center py-4">
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {formatDate(eventDate)}
+                  </div>
+                  <div className="text-sm text-slate-400">Event Date</div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Eko Convention Center</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Prime Victoria Island Location</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">A-List Entertainment</span>
+                  </li>
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
+                  Explore Lagos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Ibadan Card */}
+            <Card
+              className="bg-slate-900/50 border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => window.location.href = '/ibadan'}
+            >
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-purple-500 mb-4 mx-auto shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-white">Ibadan Edition</CardTitle>
+                <CardDescription className="text-slate-400 mt-2">
+                  University of Ibadan, Ibadan
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="text-center py-4">
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {formatDate(ibadanEventDate)}
+                  </div>
+                  <div className="text-sm text-slate-400">Event Date</div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">UI Conference Center</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Historic Academic Venue</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Cultural Fusion Experience</span>
+                  </li>
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold">
+                  Explore Ibadan
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </section>
+
+        {/* Ticket Tiers Section 
         <section id="tickets" className="mb-16 sm:mb-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Choose Your Experience</h2>
@@ -340,7 +410,7 @@ export default function Home() {
               )
             })}
           </div>
-        </section>
+        </section>*/}
 
         {/* About Section */}
         <section id="about" className="mb-16 sm:mb-24">
