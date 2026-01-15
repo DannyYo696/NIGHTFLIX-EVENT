@@ -143,7 +143,7 @@ export default function Home() {
   eventDate.setDate(eventDate.getDate() + 30) // Set event date to 30 days from now
 
   const ibadanEventDate = new Date()
-  ibadanEventDate.setDate(ibadanEventDate.getDate() + 37) // Ibadan event date
+  ibadanEventDate.setDate(ibadanEventDate.getDate() + 31) // Ibadan event date
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
