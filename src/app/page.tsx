@@ -275,7 +275,7 @@ export default function Home() {
               </CardContent>
 
               <CardFooter>
-                <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold">
+                <Button className="w-full bg-gradient-to-r from-purple-50 0 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold">
                   Explore Ibadan
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -322,6 +322,50 @@ export default function Home() {
               <CardFooter>
                 <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
                   Explore Lagos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Akure Card */}
+            <Card
+              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => window.location.href = '/akure'}
+            >
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500 mb-4 mx-auto shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-white">Akure Edition</CardTitle>
+                <CardDescription className="text-slate-400 mt-2">
+                  Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja Lagos
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="text-center py-4">
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {formatDate(eventDate)}
+                  </div>
+                  <div className="text-sm text-slate-400">Event Date</div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Ikeja, Lagos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Contemporary Event Venue</span>
+                  </li>
+                  
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
+                  Explore Akure
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </CardFooter>
