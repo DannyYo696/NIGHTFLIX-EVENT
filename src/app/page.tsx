@@ -140,7 +140,7 @@ export default function Home() {
   }
 
   const eventDate = new Date()
-  eventDate.setDate(eventDate.getDate() + 30) // Set event date to 30 days from now
+  eventDate.setDate(eventDate.getDate() + 28) // Set event date to 30 days from now
 
   const ibadanEventDate = new Date()
   ibadanEventDate.setDate(ibadanEventDate.getDate() + 29) // Ibadan event date
@@ -278,7 +278,51 @@ export default function Home() {
 
 
 
-            {/* Ibadan Card */}
+            
+
+
+            {/* Lagos Card */}
+            <Card
+              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => window.location.href = '/lagos'}
+            >
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-rose-500 mb-4 mx-auto shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-white">Lagos Edition</CardTitle>
+                
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="text-center py-4">
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {formatDate(eventDate)}
+                  </div>
+                  <div className="text-sm text-slate-400">Event Date</div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja Lagos</span>
+                  </li>
+                  
+                  
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
+                  Explore Lagos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+
+
+          {/* Ibadan Card */}
             <Card
               className="bg-slate-900/50 border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
               onClick={() => window.location.href = '/ibadan'}
@@ -288,9 +332,7 @@ export default function Home() {
                   <MapPin className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-white">Ibadan Edition</CardTitle>
-                <CardDescription className="text-slate-400 mt-2">
-                  International Conference Center, Ibadan
-                </CardDescription>
+                
               </CardHeader>
 
               <CardContent className="space-y-4">
@@ -304,11 +346,7 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">UI Second Gate, Ibadan</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Iconic Event Venue</span>
+                    <span className="text-sm text-slate-300">International conference center( Open Space)  , University of Ibadan Second gate</span>
                   </li>
                   
                 </ul>
@@ -323,49 +361,6 @@ export default function Home() {
             </Card>
 
 
-            {/* Lagos Card */}
-            <Card
-              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              onClick={() => window.location.href = '/lagos'}
-            >
-              <CardHeader className="text-center pb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-rose-500 mb-4 mx-auto shadow-lg">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-white">Lagos Edition</CardTitle>
-                <CardDescription className="text-slate-400 mt-2">
-                  Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja Lagos
-                </CardDescription>
-              </CardHeader>
-
-              <CardContent className="space-y-4">
-                <div className="text-center py-4">
-                  <div className="text-2xl font-bold text-white mb-2">
-                    {formatDate(eventDate)}
-                  </div>
-                  <div className="text-sm text-slate-400">Event Date</div>
-                </div>
-
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Ikeja, Lagos</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Contemporary Event Venue</span>
-                  </li>
-                  
-                </ul>
-              </CardContent>
-
-              <CardFooter>
-                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
-                  Explore Lagos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardFooter>
-            </Card>
 
             {/* Akure Card 
             <Card
