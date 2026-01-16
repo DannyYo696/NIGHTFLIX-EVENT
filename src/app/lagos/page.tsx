@@ -116,10 +116,13 @@ export default function LagosPage() {
               <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
               Back to Home
             </Button>
-            <div className="flex items-center gap-2">
-              <Ticket className="h-8 w-8 text-rose-500" />
-              <span className="text-xl font-bold text-white">Nightflix Lagos</span>
-            </div>
+            <div className="flex items-center">
+  <img
+    src="https://raw.githubusercontent.com/DannyYo696/svillage/7c466bf2c8e9b34724c7e49168765b0b77f308a0/Nightflix%20L1.png"
+    alt="Nightflix Logo"
+    className="h-30 w-auto"
+  />
+</div>
             <div className="w-32" />
           </div>
         </div>
@@ -134,7 +137,7 @@ export default function LagosPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Nightflix
+            Nightflix Inc.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-500 mt-2">
               Lagos Experience
             </span>
@@ -151,7 +154,7 @@ export default function LagosPage() {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-rose-500" />
-              <span>7:00 PM</span>
+              <span>5:00 PM</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-rose-500" />
@@ -167,8 +170,8 @@ export default function LagosPage() {
                   <Building2 className="h-6 w-6 text-rose-500" />
                 </div>
                 <div className="flex-1 text-left">
-                  <h3 className="text-lg font-semibold text-white mb-2">Venue: Eko Convention Center</h3>
-                  <p className="text-sm text-slate-400 mb-2">Victoria Island, Lagos</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Venue: Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja</h3>
+                  <p className="text-sm text-slate-400 mb-2">Ikeja, Lagos</p>
                   <div className="flex items-center gap-2 text-sm text-slate-400">
                     <Navigation className="h-4 w-4 text-emerald-500" />
                     <span>15 minutes from Lekki</span>
