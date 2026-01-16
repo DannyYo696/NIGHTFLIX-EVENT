@@ -143,7 +143,7 @@ export default function Home() {
   eventDate.setDate(eventDate.getDate() + 30) // Set event date to 30 days from now
 
   const ibadanEventDate = new Date()
-  ibadanEventDate.setDate(ibadanEventDate.getDate() + 31) // Ibadan event date
+  ibadanEventDate.setDate(ibadanEventDate.getDate() + 29) // Ibadan event date
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
@@ -235,52 +235,8 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Lagos Card */}
-            <Card
-              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-              onClick={() => window.location.href = '/lagos'}
-            >
-              <CardHeader className="text-center pb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-rose-500 mb-4 mx-auto shadow-lg">
-                  <MapPin className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-white">Lagos Edition</CardTitle>
-                <CardDescription className="text-slate-400 mt-2">
-                  Victoria Island, Lagos
-                </CardDescription>
-              </CardHeader>
 
-              <CardContent className="space-y-4">
-                <div className="text-center py-4">
-                  <div className="text-2xl font-bold text-white mb-2">
-                    {formatDate(eventDate)}
-                  </div>
-                  <div className="text-sm text-slate-400">Event Date</div>
-                </div>
 
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Eko Convention Center</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Prime Victoria Island Location</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">A-List Entertainment</span>
-                  </li>
-                </ul>
-              </CardContent>
-
-              <CardFooter>
-                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
-                  Explore Lagos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardFooter>
-            </Card>
 
             {/* Ibadan Card */}
             <Card
@@ -293,7 +249,7 @@ export default function Home() {
                 </div>
                 <CardTitle className="text-2xl text-white">Ibadan Edition</CardTitle>
                 <CardDescription className="text-slate-400 mt-2">
-                  University of Ibadan, Ibadan
+                  International Conference Center, Ibadan
                 </CardDescription>
               </CardHeader>
 
@@ -308,16 +264,13 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">UI Conference Center</span>
+                    <span className="text-sm text-slate-300">UI Second Gate, Ibadan</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Historic Academic Venue</span>
+                    <span className="text-sm text-slate-300">Iconic Event Venue</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Cultural Fusion Experience</span>
-                  </li>
+                  
                 </ul>
               </CardContent>
 
@@ -328,6 +281,53 @@ export default function Home() {
                 </Button>
               </CardFooter>
             </Card>
+
+
+            {/* Lagos Card */}
+            <Card
+              className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => window.location.href = '/lagos'}
+            >
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-rose-500 mb-4 mx-auto shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-white">Lagos Edition</CardTitle>
+                <CardDescription className="text-slate-400 mt-2">
+                  Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja Lagos
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="text-center py-4">
+                  <div className="text-2xl font-bold text-white mb-2">
+                    {formatDate(eventDate)}
+                  </div>
+                  <div className="text-sm text-slate-400">Event Date</div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Ikeja, Lagos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-300">Contemporary Event Venue</span>
+                  </li>
+                  
+                </ul>
+              </CardContent>
+
+              <CardFooter>
+                <Button className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold">
+                  Explore Lagos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+      
           </div>
         </section>
 
