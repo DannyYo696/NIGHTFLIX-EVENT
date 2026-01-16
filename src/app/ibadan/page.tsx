@@ -116,10 +116,13 @@ export default function IbadanPage() {
               <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
               Back to Home
             </Button>
-            <div className="flex items-center gap-2">
-              <Ticket className="h-8 w-8 text-rose-500" />
-              <span className="text-xl font-bold text-white">Nightflix Ibadan</span>
-            </div>
+            <div className="flex items-center">
+  <img
+    src="https://raw.githubusercontent.com/DannyYo696/svillage/7c466bf2c8e9b34724c7e49168765b0b77f308a0/Nightflix%20L1.png"
+    alt="Nightflix Logo"
+    className="h-30 w-auto"
+  />
+</div>
             <div className="w-32" />
           </div>
         </div>
@@ -134,7 +137,7 @@ export default function IbadanPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Nightflix
+            Nightflix Inc.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 mt-2">
               Ibadan Experience
             </span>
@@ -147,11 +150,11 @@ export default function IbadanPage() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base text-slate-300 mb-12">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5 text-purple-500" />
-              <span>{formatDate(eventDate)}</span>
+              <span>Saturday, February 14, 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-purple-500" />
-              <span>7:00 PM</span>
+              <span>5:00 PM</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-purple-500" />
