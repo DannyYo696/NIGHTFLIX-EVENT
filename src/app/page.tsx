@@ -151,10 +151,14 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-xl">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Ticket className="h-8 w-8 text-rose-500" />
-              <span className="text-xl font-bold text-white">Nightflix</span>
-            </div>
+            <div className="flex items-center">
+  <img
+    src="https://raw.githubusercontent.com/DannyYo696/svillage/7c466bf2c8e9b34724c7e49168765b0b77f308a0/Nightflix%20L1.png"
+    alt="Nightflix Logo"
+    className="h-30 w-auto"
+  />
+</div>
+
             <nav className="hidden sm:flex items-center gap-6">
               <a href="#cities" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
                 Cities
@@ -188,7 +192,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Nightflix
+            Nightflix Inc.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-500 mt-2">
               Live Experience
             </span>
@@ -201,15 +205,15 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base text-slate-300 mb-12">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5 text-rose-500" />
-              <span>{formatDate(eventDate)}</span>
+              <span>February 14 & 15, 2026</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-rose-500" />
-              <span>7:00 PM</span>
+              <span>5:00 PM</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-rose-500" />
-              <span>Lagos, Nigeria</span>
+              <span>Lagos, Ibadan, Nigeria.</span>
             </div>
           </div>
 
@@ -327,7 +331,7 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            {/* Akure Card */}
+            {/* Akure Card 
             <Card
               className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
               onClick={() => window.location.href = '/akure'}
@@ -369,7 +373,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </CardFooter>
-            </Card>
+            </Card>*/}
 
       
           </div>
