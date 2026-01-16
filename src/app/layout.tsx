@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NIGHTFLIX",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
+  description: "Buy Nightflix tickets for Lagos, Ibadan, and other cities.",
+  keywords: ["Nightflix", "Nightflix Lagos", "Nightflix Ibadan", "Nightflix Event", "Buy Nightflix Tickets"],
   icons: {
     icon: "https://raw.githubusercontent.com/DannyYo696/svillage/1e09662e759a683b296438749046aa1d674d8b3c/Nightflix%20L.png",
   },
