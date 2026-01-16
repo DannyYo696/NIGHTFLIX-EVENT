@@ -185,50 +185,86 @@ export default function Home() {
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Hero Section */}
-        <section className="text-center mb-16 sm:mb-24">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-            <Zap className="h-4 w-4 text-rose-500" />
-            <span className="text-sm font-semibold text-rose-500">Limited Tickets Available</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Nightflix Inc.
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-500 mt-2">
-              Live Experience
-            </span>
-          </h1>
+        <section
+  className="relative text-center mb-16 sm:mb-24 rounded-3xl overflow-hidden"
+  style={{
+    backgroundImage: "url(https://raw.githubusercontent.com/DannyYo696/svillage/b53ddbb1d05ac5cd96902b23a1ce2b43043bc881/_MG_7618.jpg)",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-slate-950/65" />
 
-          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8">
-            Experience the ultimate night of entertainment, music, and excitement. Join us for an unforgettable event!
-          </p>
 
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base text-slate-300 mb-12">
-            <div className="flex items-center gap-2">
-              <Calendar className="h-5 w-5 text-rose-500" />
-              <span>February 14 & 15, 2026</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-5 w-5 text-rose-500" />
-              <span>5:00 PM</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-rose-500" />
-              <span>Lagos, Ibadan, Nigeria.</span>
-            </div>
-          </div>
+  {/* Content */}
+  <div className="relative z-10 px-6 py-20 sm:py-28">
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
+      <Zap className="h-4 w-4 text-rose-500" />
+      <span className="text-sm font-semibold text-rose-500">Limited Tickets Available</span>
+    </div>
 
-          <Button
-            size="lg"
-            onClick={() => document.getElementById('cities')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold px-8 py-6 text-lg shadow-lg shadow-rose-500/25"
-          >
-            Get Your Tickets Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </section>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+      Nightflix Inc.
+      <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-purple-500 mt-2">
+        MOVIES | MUSIC | GAMES | VIBES
+      </span>
+    </h1>
+
+    <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+      With fresh air, good sound, great people, and a film under the stars, Feel the Night with NightlFlix.
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base text-slate-300 mb-12">
+      <div className="flex items-center gap-2">
+        <Calendar className="h-5 w-5 text-rose-500" />
+        <span>February 14 & 15, 2026</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <Clock className="h-5 w-5 text-rose-500" />
+        <span>5:00 PM</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <MapPin className="h-5 w-5 text-rose-500" />
+        <span>Lagos, Ibadan, Nigeria.</span>
+      </div>
+    </div>
+
+    <Button
+      size="lg"
+      onClick={() => document.getElementById('cities')?.scrollIntoView({ behavior: 'smooth' })}
+      className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white font-semibold px-8 py-6 text-lg shadow-lg shadow-rose-500/25"
+    >
+      Get Your Tickets Now
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </Button>
+  </div>
+</section>
+
 
         {/* Image Carousel */}
 <AutoCarousel />
+
+{/* Event Flier Section */}
+{/* Event Flier Section */}
+<section className="mb-20 sm:mb-28">
+  <div className="max-w-4xl mx-auto flex justify-center">
+    <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
+      <img
+        src="https://raw.githubusercontent.com/DannyYo696/svillage/1580810bf28ff1c440b7dd5b9ff2806606ad9f33/Event%20announcement%20N.jpg"
+        alt="Nightflix 2026 Event Flier"
+        className="w-full sm:w-[60%] lg:w-[45%] mx-auto h-auto object-contain"
+
+      />
+
+      {/* Subtle overlay */}
+      <div className="absolute inset-0 bg-slate-950/10 pointer-events-none" />
+    </div>
+  </div>
+</section>
+
+
 
 
         {/* City Selection Section */}
@@ -495,7 +531,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-400">
-                    Located in the heart of Lagos with easy accessibility. Multiple parking options and excellent transport links available.
+                    Thoughtfully curated spaces across cities, chosen for accessibility, ambience, and convenience. Each NightFlix experience is hosted in locations with easy access, ample parking, and reliable transport links.
                   </p>
                 </CardContent>
               </Card>
