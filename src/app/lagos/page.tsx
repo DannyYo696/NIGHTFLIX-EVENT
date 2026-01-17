@@ -100,7 +100,7 @@ export default function LagosPage() {
   }
 
   const eventDate = new Date()
-  eventDate.setDate(eventDate.getDate() + 30)
+  eventDate.setDate(eventDate.getDate() + 27)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
@@ -306,11 +306,11 @@ export default function LagosPage() {
               <Card className="bg-slate-900/50 border-slate-800">
                 <CardHeader>
                   <MapPin className="h-12 w-12 text-emerald-500 mb-4" />
-                  <CardTitle className="text-xl text-white">Prime Victoria Island Location</CardTitle>
+                  <CardTitle className="text-xl text-white">Prime Locations</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-400">
-                    Located at Eko Convention Center in Victoria Island. Easy accessibility with premium parking, security, and nearby luxury hotels.
+                    Thoughtfully curated spaces across cities, chosen for accessibility, ambience, and convenience. Each NightFlix experience is hosted in locations with easy access, ample parking, and reliable transport links.
                   </p>
                 </CardContent>
               </Card>
