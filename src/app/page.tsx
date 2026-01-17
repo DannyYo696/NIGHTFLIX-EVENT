@@ -140,10 +140,10 @@ export default function Home() {
   }
 
   const eventDate = new Date()
-  eventDate.setDate(eventDate.getDate() + 28) // Set event date to 30 days from now
+  eventDate.setDate(eventDate.getDate() + 27) // Set event date to 30 days from now
 
   const ibadanEventDate = new Date()
-  ibadanEventDate.setDate(ibadanEventDate.getDate() + 29) // Ibadan event date
+  ibadanEventDate.setDate(ibadanEventDate.getDate() + 28) // Ibadan event date
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
@@ -213,13 +213,13 @@ export default function Home() {
     </h1>
 
     <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-      With fresh air, good sound, great people, and a film under the stars, Feel the Night with NightlFlix.
+      With fresh air, good sound, great people, and a film under the stars, Feel the Night with Nightflix.
     </p>
 
     <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base text-slate-300 mb-12">
       <div className="flex items-center gap-2">
         <Calendar className="h-5 w-5 text-rose-500" />
-        <span>February 14 & 15, 2026</span>
+        <span>February 13 & 14, 2026</span>
       </div>
       <div className="flex items-center gap-2">
         <Clock className="h-5 w-5 text-rose-500" />
