@@ -172,12 +172,7 @@ export default function IbadanPage() {
                 <div className="flex-1 text-left">
                   <h3 className="text-lg font-semibold text-white mb-2">Venue: University of Ibadan Conference Center</h3>
                   <p className="text-sm text-slate-400 mb-2">University of Ibadan, Ibadan</p>
-                  <div className="flex items-center gap-2 text-sm text-slate-400">
-                    <Navigation className="h-4 w-4 text-emerald-500" />
-                    <span>10 minutes from Bodija</span>
-                    <span className="text-slate-600">•</span>
-                    <span>20 minutes from Challenge</span>
-                  </div>
+                  
                 </div>
               </div>
             </CardContent>
