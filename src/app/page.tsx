@@ -252,7 +252,7 @@ export default function Home() {
   <div className="max-w-4xl mx-auto flex justify-center">
     <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
       <img
-        src="https://raw.githubusercontent.com/DannyYo696/svillage/1580810bf28ff1c440b7dd5b9ff2806606ad9f33/Event%20announcement%20N.jpg"
+        src="https://raw.githubusercontent.com/DannyYo696/svillage/e81765c35de6b2b6ce53437c26313708629caac3/Event%20announcement%20NN.jpg"
         alt="Nightflix 2026 Event Flier"
         className="w-full sm:w-[60%] lg:w-[45%] mx-auto h-auto object-contain"
 
