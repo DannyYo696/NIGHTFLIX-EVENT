@@ -1,6 +1,5 @@
 'use client'
 
-import { Analytics } from "@vercel/analytics/next"
 import { useState } from 'react'
 import { Ticket, Calendar, MapPin, Users, Star, Crown, Zap, ArrowRight, Clock, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -363,7 +362,7 @@ export default function Home() {
 
 
 
-            {/* Akure Card 
+            {/* Akure Card*/}
             <Card
               className="bg-slate-900/50 border-slate-800 hover:border-rose-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
               onClick={() => window.location.href = '/akure'}
@@ -373,9 +372,7 @@ export default function Home() {
                   <MapPin className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-white">Akure Edition</CardTitle>
-                <CardDescription className="text-slate-400 mt-2">
-                  Eridanspace, The Phillips Centre, Oluwalogbon House, Plot A , Obafemi Awolowo way, Alausa Ikeja Lagos
-                </CardDescription>
+                
               </CardHeader>
 
               <CardContent className="space-y-4">
@@ -389,12 +386,9 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Ikeja, Lagos</span>
+                    <span className="text-sm text-slate-300">Champion Playground, ALAGBAKA, Akure</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-300">Contemporary Event Venue</span>
-                  </li>
+                  
                   
                 </ul>
               </CardContent>
@@ -405,7 +399,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </CardFooter>
-            </Card>*/}
+            </Card>
 
       
           </div>
