@@ -11,9 +11,9 @@ import { toast } from '@/hooks/use-toast'
 
 const TICKET_TIERS = [
   {
-    id: 'regular',
+    id: 'luv',
     name: 'Regular',
-    price: 5000,
+    price: 10000,
     description: 'Standard access to event',
     features: [
       'Event entry',
@@ -26,9 +26,9 @@ const TICKET_TIERS = [
     borderColor: 'border-emerald-500'
   },
   {
-    id: 'vip',
+    id: 'luvly',
     name: 'VIP',
-    price: 30000,
+    price: 50000,
     description: 'Premium experience with exclusive perks',
     features: [
       'Priority entrance',
@@ -44,9 +44,9 @@ const TICKET_TIERS = [
     popular: true
   },
   {
-    id: 'gang-of-5',
-    name: 'Gang of 5',
-    price: 20000,
+    id: 'queen',
+    name: 'Couples',
+    price: 15000,
     description: 'Group package for 5 people',
     features: [
       '5 tickets included',
@@ -100,7 +100,7 @@ export default function AkurePage() {
   }
 
   const eventDate = new Date()
-  eventDate.setDate(eventDate.getDate() + 31)
+  eventDate.setDate(eventDate.getDate() + 26)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
@@ -116,10 +116,13 @@ export default function AkurePage() {
               <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
               Back to Home
             </Button>
-            <div className="flex items-center gap-2">
-              <Ticket className="h-8 w-8 text-rose-500" />
-              <span className="text-xl font-bold text-white">Nightflix Akure</span>
-            </div>
+            <div className="flex items-center">
+  <img
+    src="https://raw.githubusercontent.com/DannyYo696/svillage/7c466bf2c8e9b34724c7e49168765b0b77f308a0/Nightflix%20L1.png"
+    alt="Nightflix Logo"
+    className="h-30 w-auto"
+  />
+</div>
             <div className="w-32" />
           </div>
         </div>
@@ -134,7 +137,7 @@ export default function AkurePage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Nightflix
+            Nightflix Inc.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 mt-2">
               Akure Experience
             </span>
@@ -151,7 +154,7 @@ export default function AkurePage() {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-purple-500" />
-              <span>7:00 PM</span>
+              <span>5:00 PM</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-purple-500" />
@@ -167,14 +170,9 @@ export default function AkurePage() {
                   <Building2 className="h-6 w-6 text-purple-500" />
                 </div>
                 <div className="flex-1 text-left">
-                  <h3 className="text-lg font-semibold text-white mb-2">Venue: University of Akure Conference Center</h3>
-                  <p className="text-sm text-slate-400 mb-2">University of Akure, Akure</p>
-                  <div className="flex items-center gap-2 text-sm text-slate-400">
-                    <Navigation className="h-4 w-4 text-emerald-500" />
-                    <span>10 minutes from Bodija</span>
-                    <span className="text-slate-600">•</span>
-                    <span>20 minutes from Challenge</span>
-                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Venue: Champion Playground, ALAGBAKA, Akure</h3>
+                  <p className="text-sm text-slate-400 mb-2">Akure, Ondo State</p>
+                  
                 </div>
               </div>
             </CardContent>
@@ -300,76 +298,13 @@ export default function AkurePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <MapPin className="h-12 w-12 text-emerald-500 mb-4" />
-                  <CardTitle className="text-xl text-white">Historic UI Venue</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-400">
-                    Hosted at the prestigious University of Akure Conference Center. A venue that combines academic excellence with modern entertainment facilities.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <Ticket className="h-12 w-12 text-amber-500 mb-4" />
-                  <CardTitle className="text-xl text-white">Affordable Luxury</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-400">
-                    Premium entertainment at Akure prices. Experience world-class production value and performances at a fraction of Lagos prices.
-                  </p>
-                </CardContent>
-              </Card>
+              
             </div>
           </div>
         </section>
 
         {/* Getting There Section */}
-        <section id="getting-there" className="mb-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Getting There</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <Navigation className="h-8 w-8 text-purple-500 mb-3" />
-                  <CardTitle className="text-lg text-white">By Car</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-slate-400">
-                    Free parking available at UI campus. 10 minutes from Bodija, 20 minutes from Challenge area.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <Users className="h-8 w-8 text-pink-500 mb-3" />
-                  <CardTitle className="text-lg text-white">Ride-Sharing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-slate-400">
-                    Uber and Bolt drivers familiar with UI campus. Direct drop-off at the conference center entrance.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-900/50 border-slate-800">
-                <CardHeader>
-                  <Building2 className="h-8 w-8 text-emerald-500 mb-3" />
-                  <CardTitle className="text-lg text-white">Public Transport</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-slate-400">
-                    Commercial buses and taxis available to Bodija and Challenge. Short commute from any part of the city.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        
       </main>
 
       {/* Footer */}
