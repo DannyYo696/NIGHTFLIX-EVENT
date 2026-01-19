@@ -55,6 +55,9 @@ enum TicketTier {
   REGULAR
   VIP
   GANG_OF_5
+  REGULARLY
+  VIPAKURE
+  COUPLES
 }
 
 enum PaymentStatus {
