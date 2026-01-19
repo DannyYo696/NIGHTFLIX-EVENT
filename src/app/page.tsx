@@ -378,7 +378,7 @@ export default function Home() {
               <CardContent className="space-y-4">
                 <div className="text-center py-4">
                   <div className="text-2xl font-bold text-white mb-2">
-                    {formatDate(eventDate)}
+                    Saturday, February 14, 2026
                   </div>
                   <div className="text-sm text-slate-400">Event Date</div>
                 </div>
