@@ -1,5 +1,6 @@
 'use client'
 
+import { Analytics } from "@vercel/analytics/next"
 import { useState } from 'react'
 import { Ticket, Calendar, MapPin, Users, Star, Crown, Zap, ArrowRight, Clock, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
