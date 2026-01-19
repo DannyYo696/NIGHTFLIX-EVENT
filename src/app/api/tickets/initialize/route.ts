@@ -9,12 +9,18 @@ const TICKET_PRICES: Record<string, number> = {
   REGULAR: 5000,
   VIP: 30000,
   GANG_OF_5: 20000,
+  REGULARLY: 10000,
+  VIPAKURE: 50000,
+  COUPLES: 15000,
 }
 
 const TICKET_QUANTITIES: Record<string, number> = {
   REGULAR: 1,
   VIP: 1,
   GANG_OF_5: 5,
+  REGULARLY: 1,
+  VIPAKURE: 1,
+  COUPLES: 2,
 }
 
 export async function POST(request: NextRequest) {
