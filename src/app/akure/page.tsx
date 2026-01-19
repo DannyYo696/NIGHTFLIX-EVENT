@@ -26,6 +26,23 @@ const TICKET_TIERS = [
     borderColor: 'border-emerald-500'
   },
   {
+    id: 'queen',
+    name: 'Couples',
+    price: 15000,
+    description: 'Group package for 5 people',
+    features: [
+      '5 tickets included',
+      'Group seating arrangement',
+      'Entry for your entire squad',
+      'Discounted rate per person (₦4,000)',
+      'Digital ticket delivery'
+    ],
+    icon: Users,
+    color: 'bg-purple-500',
+    borderColor: 'border-purple-500',
+    isGroup: true
+  },
+  {
     id: 'luvly',
     name: 'VIP',
     price: 50000,
@@ -43,23 +60,7 @@ const TICKET_TIERS = [
     borderColor: 'border-amber-500',
     popular: true
   },
-  {
-    id: 'queen',
-    name: 'Couples',
-    price: 15000,
-    description: 'Group package for 5 people',
-    features: [
-      '5 tickets included',
-      'Group seating arrangement',
-      'Entry for your entire squad',
-      'Discounted rate per person (₦4,000)',
-      'Digital ticket delivery'
-    ],
-    icon: Users,
-    color: 'bg-purple-500',
-    borderColor: 'border-purple-500',
-    isGroup: true
-  }
+  
 ]
 
 export default function AkurePage() {
