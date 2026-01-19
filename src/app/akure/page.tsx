@@ -29,12 +29,11 @@ const TICKET_TIERS = [
     id: 'couples',
     name: 'Couples',
     price: 15000,
-    description: 'Group package for 5 people',
+    description: 'Suitable for couples',
     features: [
-      '5 tickets included',
+      '2 tickets included',
       'Group seating arrangement',
-      'Entry for your entire squad',
-      'Discounted rate per person (₦4,000)',
+      'Entry for you and your partner',
       'Digital ticket delivery'
     ],
     icon: Users,
@@ -231,7 +230,7 @@ export default function AkurePage() {
                       </div>
                       {tier.isGroup && (
                         <div className="text-sm text-slate-400">
-                          ₦{pricePerPerson.toLocaleString()} per person (5 tickets)
+                          
                         </div>
                       )}
                     </div>
